@@ -39,6 +39,9 @@
     <Content Include="models\User.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="partials\messages.ejs">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="routes\index.js">
       <SubType>Code</SubType>
     </Content>
@@ -67,6 +70,7 @@
   <ItemGroup>
     <Folder Include="config\" />
     <Folder Include="models\" />
+    <Folder Include="partials\" />
     <Folder Include="views\" />
     <Folder Include="routes\" />
   </ItemGroup>
