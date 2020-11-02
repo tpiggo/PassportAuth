@@ -33,13 +33,22 @@
     <Content Include="app.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="config\authenticate.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="config\keys.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="config\passport.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="models\User.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="partials\messages.ejs">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="routes\index.js">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="routes\login.js">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="routes\register.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="routes\users.js">
@@ -51,11 +60,26 @@
     <Content Include="views\layout.ejs">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="views\login.ejs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\dashboard.ejs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\register.ejs">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\views.ejs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\welcome.ejs">
       <SubType>Code</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="config\" />
+    <Folder Include="models\" />
+    <Folder Include="partials\" />
     <Folder Include="views\" />
     <Folder Include="routes\" />
   </ItemGroup>
