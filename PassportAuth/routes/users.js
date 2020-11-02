@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
-
 const bcrypt = require("bcryptjs");
+const passport = require('passport');
+
 // User model needs to be imported
 const User = require('../models/User');
 
@@ -61,16 +62,25 @@ router.post('/register', (req, res) => {
                             newUser.password = hash;
                             newUser.save()
                                 .then(user => {
-                                    console.log("Sent!");
+                                    req.flash('success_msg', 'You are now registered!');
                                     res.redirect('/users/login');
                                 })
-                                .catch(err => { console.log(err); console.log("Error in submission!!"); });
+                                .catch(err => { console.log(err); });
                         });
                     });
                 }
             })
-            .catch(err => { console.log(err); console.log("we are here!"); });
+            .catch(err => { console.log(err); });
     }
 })
+// Handle the post request to the login page
+// Login handle
+router.post('/login', (req, res, next) => {
+    passport.authenticate('local', {
+        successRedirect: '/dashboard',
+        failureRedirect: '/users/login',
+        failureFlash: true
+    })(req, res, next);
+});
 
 module.exports = router;

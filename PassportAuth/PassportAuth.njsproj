@@ -36,6 +36,9 @@
     <Content Include="config\keys.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="config\passport.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="models\User.js">
       <SubType>Code</SubType>
     </Content>
